@@ -1,0 +1,295 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap');
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* User Styles */
+
+html,body{
+    margin:0;
+    padding: 0;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 12px;
+}
+
+.board{
+     margin: 15px;
+     background: #bcbcbc;
+ }
+
+ .board__content{
+     display: flex;
+     flex-flow: row;
+ }
+
+.list{
+     width: 24vw;
+     background: #e5f4ff;
+     padding: 5px;
+     margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+     
+}
+
+.list__container{
+    display: flex;
+    gap: 10px;
+
+}
+
+.list__holder{
+    background: #e5f4ff;
+}
+
+.list__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 1.2;
+}
+
+.list__content{
+     padding:18px;
+}
+
+.newlist-button{
+    float: right;
+    border: 0;
+    text-transform: uppercase;
+    font-size: 16px;
+    background: #add8e6;
+    color: #494949;
+    padding: 5px 10px;
+    border-radius: 2px;
+    border-color: transparent;
+    position: absolute;
+    top: 44px;
+    right: 4px;
+}
+
+.card{
+    box-shadow: 2px 2px 4px #706969;
+     background: lightblue;
+     margin-bottom: 20px
+}
+
+.card__content{
+    padding: 8px;
+}
+
+.title{
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-family: 'Open Sans';
+}
+.title--main{
+    font-size: 2.25em;
+    background: gray;
+    padding: 8px;
+    color: #fff;
+}
+.title--secondary{
+    font-size: 1.25em;
+    background: #69a4d7;
+    color: #fff;
+    padding: 8px 3px;
+}
+
+.title--plain{
+    font-size: 1.25em;
+    background: transparent
+}
+
+.title--model{
+    background: #dcdcdc;
+    width: 100%;
+    padding: 10px;
+    font-weight: 600;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.control{
+    border: 1px solid;
+    padding: 0 5px;
+}
+
+.control--delete{
+    color: red;
+    background: #ffd2d2;
+}
+
+.control--close {
+    border: 0;
+    font-size: 15px;
+}
+
+
+.control--addnew{
+    left: 0;
+    border:0;
+    background: lightgreen;
+    text-decoration: none;
+    box-sizing: border-box;
+    text-align: center;
+    padding:10px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-weight: 600;
+    color: blue;
+}
+
+.control--addnew:hover {
+    text-decoration: none;
+}
+
+.control:hover{
+    cursor: pointer;
+}
+
+
+/* UTILS */
+
+.icon{
+
+}
+
+.icon--small{
+    width: 13px;
+    height: 13px;
+}
+
+.stickybottom-is-present{
+    position: relative;
+    padding-bottom: 35px;
+}
+
+.stickybottom{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.abs{
+    position: absolute
+}
+
+.abs-right{
+    right: 8%;
+    left: initial;
+}
+
+.self-start{
+    align-self: self-start;
+}
+
+.margin-top-medium{
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="button"]{
+    border: 1px solid #808080;
+    margin: 4px 0 8px 0;
+}
+
+input[type="button"]{
+    font-family: 'Open Sans','sans-serif';
+    background: #7d9ba9;
+    color: #fff;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+input[type="button"]:hover{
+   cursor: pointer;
+}
+
+.modal{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background: #000c;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    z-index: 10;
+}
+
+.model__content{
+    position: relative;
+    width: 300px;
+    
+    left: calc(50% - 150px);
+    background: #fff;
+    top: calc(50vh - 150px);
+  
+}
+
+.form-group{
+    width: 100%;
+    margin: 12px;
+
+}
+
+.form-group label{
+    display: block;
+}
+
+html, body { height: 100%;font-family: 'Open Sans', sans-serif;  }
+body { margin: 0; font-family: 'Open Sans', sans-serif; }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
