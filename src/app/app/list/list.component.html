@@ -1,0 +1,15 @@
+<div  class="list__container">
+<div class="list stickybottom-is-present" id="list_holder" *ngFor="let looper of listItems; let i = index;" >
+    <div class="list__header">
+            <h2 class="title title--plain" contenteditable="true">{{looper}} <img class="icon icon--small" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyLjAwMSA1MTIuMDAxIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIuMDAxIDUxMi4wMDE7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxnPg0KCQk8cGF0aCBkPSJNNDk2LjA2Myw2Mi4yOTlsLTQ2LjM5Ni00Ni40Yy0yMS4xOTktMjEuMTk5LTU1LjY4OS0yMS4xOTgtNzYuODg4LDBDMzUyLjgyLDM1Ljg2LDQ3Ljk2NCwzNDAuNzM5LDI3LjU5MSwzNjEuMTEzDQoJCQljLTIuMTcsMi4xNy0zLjYyNCw1LjA1NC00LjE0Miw3Ljg3NUwwLjI1MSw0OTQuMjY4Yy0wLjg5OSw0Ljg1NywwLjY0OSw5Ljg0Niw0LjE0MiwxMy4zMzljMy40OTcsMy40OTcsOC40ODcsNS4wNDIsMTMuMzM4LDQuMTQzDQoJCQlMMTQzLDQ4OC41NDljMi44OTUtMC41NCw1Ljc0MS0yLjAwOCw3Ljg3NS00LjE0M2wzNDUuMTg4LTM0NS4yMTRDNTE3LjMxMSwxMTcuOTQ0LDUxNy4zMTQsODMuNTUsNDk2LjA2Myw2Mi4yOTl6IE0zMy43MjEsNDc4LjI3Ng0KCQkJbDE0LjAzMy03NS43ODRsNjEuNzQ2LDYxLjc1TDMzLjcyMSw0NzguMjc2eiBNMTQwLjI2OSw0NTIuNTg1TDU5LjQxLDM3MS43MjFMMzU0LjYyLDc2LjQ4OGw4MC44NTksODAuODY1TDE0MC4yNjksNDUyLjU4NXoNCgkJCSBNNDc0Ljg1LDExNy45NzlsLTE4LjE1OSwxOC4xNjFsLTgwLjg1OS04MC44NjVsMTguMTU5LTE4LjE2MWM5LjUwMS05LjUwMiwyNC45Ni05LjUwMywzNC40NjMsMGw0Ni4zOTYsNDYuNA0KCQkJQzQ4NC4zNzUsOTMuMDM5LDQ4NC4zNzUsMTA4LjQ1Myw0NzQuODUsMTE3Ljk3OXoiLz4NCgk8L2c+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==" /></h2>
+            <span class="control control--delete" (click)="deleteList(i)" >Delete</span>
+        </div>
+    <div class="list__content" cdkDrop>
+    <span *ngIf="i == listItems.length-1" class="control newlist-button" (click)="insertNewList()">Add New List</span>
+        <app-card></app-card>
+   
+    </div>
+   
+</div>
+</div>
+

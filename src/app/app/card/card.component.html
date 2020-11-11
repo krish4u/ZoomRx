@@ -1,0 +1,44 @@
+<div 
+class="card" 
+*ngFor="let item of cardTitleList; let i = index" 
+cdkDrag 
+(cdkDropListDropped)="drop($event)">
+<!-- <div class="card"  *ngFor="let item of cardList"> -->
+    <h2 class="title title--secondary">{{item}} <span id="close_{{i}}" class="abs abs-right close" (click)="delCard($event,i)">X</span></h2>
+    <div class="card__content">
+        <h6 class="title">Card Descripton :</h6>
+        <p>{{cardDescList[i]}}</p>
+
+        <h6 class="title margin-top-medium">Comments on this card :</h6>
+        <div class="card__comments">
+        <ul class="card__comments-list">
+            <li>{{cardComments[i]}}</li>
+        </ul>
+        </div>
+    </div>
+</div>
+<span class="control control--addnew stickybottom" (click)=addNewCard()>Add New Card</span>
+
+<div class="newcard modal" id="newcard_form" *ngIf="showForm">
+    <div class="model__content">
+    <h2 class="title--model self-start">Enter the new card details <span class="control control--close abs abs-right" id="close_modal" (click)="closeModal()">x</span></h2>
+    
+    <br/>
+    <div class="form-group">
+        <label for="newcard">Enter Card Name</label>
+        <input type="text" id="newcard" name="newcard" [(ngModel)]="cardName"/>
+    </div>
+    <div class="form-group">
+        <label for="newdesc">Enter card description</label>
+        <input type="text" id="newdesc" name="newdesc" [(ngModel)]="cardDesc" />
+    </div>
+    <div class="form-group">
+        <label for="newcomm">Enter card comments</label>
+         <input type="text" id="newcomm" name="newcomm" [(ngModel)]="cardComm" />
+    </div>
+
+    <div class="form-group">
+        <input type="button" value="Create Card" (click)="appendCard()" />
+    </div>
+</div>
+</div>
